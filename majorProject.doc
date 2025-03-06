@@ -1,0 +1,49 @@
+        ┌────────────────────────────┐
+        │        Users               │
+        └──────────┬─────────────────┘
+                   ▼
+      ┌────────────────────────────────┐
+      │  AWS Application Load Balancer │
+      └──────────┬─────────────────────┘
+                 ▼
+      ┌────────────────────────────────┐
+      │      Auto Scaling Group (EC2)   │
+      └──────────┬─────────────────────┘
+                 ▼
+      ┌────────────────────────────────┐
+      │  RDS (MySQL/PostgreSQL)         │
+      └────────────────────────────────┘
+
+
+
+
+
+
+1️⃣ Set Up Terraform & AWS Credentials
+    Install Terraform.
+    Configure AWS CLI with access keys.
+
+2️⃣ Define VPC & Networking
+    Create a VPC with public and private subnets.
+    Add Internet Gateway and Route Tables.
+
+3️⃣ Configure EC2 Instances with Auto Scaling
+    Define EC2 instances using Terraform.
+    Configure Auto Scaling Group (ASG).
+    Attach an Application Load Balancer (ALB).
+
+4️⃣ Deploy RDS (Database)
+    Create an RDS instance for the database.
+    Ensure security groups allow EC2 access to RDS.
+
+5️⃣ Set Up IAM Roles
+    Create IAM roles for EC2 and RDS access.
+    Use AWS Secrets Manager for storing database credentials.
+
+6️⃣ Deploy the Web Application
+    Write Terraform provisioners to install and configure the app on EC2.
+    Use S3 for storing assets (like images, logs, or backups).
+
+7️⃣ Monitoring & Logging
+    Enable CloudWatch Logs for EC2 and RDS.
+    Set up Terraform Outputs to display important values (ALB URL, DB endpoint).

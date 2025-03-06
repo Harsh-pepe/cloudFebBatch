@@ -1,0 +1,46 @@
+A minor project using EC2 & RDS can be a basic CRUD web application where:  
+
+- EC2 hosts a simple web application (Flask/Django/Node.js).  
+- RDS stores application data (MySQL/PostgreSQL).  
+
+Project: Simple To-Do List App
+A web-based to-do list where users can add, view, update, and delete tasks.
+
+
+
+ Tech Stack  
+    - Frontend: HTML, CSS (Optional: React)  
+    - Backend: Flask (Python) or Node.js  
+    - Database: MySQL on Amazon RDS  
+    - Hosting: Amazon EC2  
+    - Web Server: Nginx or Apache  
+
+
+
+ Steps to Implement
+ 1. Set up RDS Database  
+    - Create an Amazon RDS instance (MySQL/PostgreSQL).  
+    - Create a database and a table for storing to-do items.  
+    - Ensure security groups allow EC2 access to RDS.
+
+ 2. Launch EC2 Instance
+    - Launch an EC2 instance (Ubuntu or Amazon Linux).  
+    - Install required software (Python, Flask, Node.js, MySQL client).  
+    - Configure security groups to allow inbound traffic.
+
+ 3. Develop the Application
+    - Write a Flask or Node.js app to handle CRUD operations.  
+    - Connect the backend to RDS using a MySQL/PostgreSQL client.  
+    - Create API routes for adding, retrieving, updating, and deleting tasks.
+
+ 4. Deploy the Application
+    - Upload the application to EC2 (using Git or SCP).  
+    - Set up Gunicorn (Flask) or PM2 (Node.js) for running the app.  
+    - Use Nginx/Apache as a reverse proxy.
+
+ 5. Test and Secure
+    - Test API endpoints and frontend.  
+    - Enable firewall rules for security.  
+    - Set up CloudWatch for monitoring.
+
+
